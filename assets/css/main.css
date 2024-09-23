@@ -19,10 +19,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5846f9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: # background-color: #030b25 ;; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #060606; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -33,14 +33,14 @@
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5846f9; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #A8A2CB; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9ff8ff;
+  --background-color:#f9ff8ff;
   --surface-color: #ffffff;
 }
 
@@ -71,7 +71,8 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  rgb(0,0,24);
+background: linear-gradient(180deg, rgba(0,0,24,1) 64%, rgba(91,88,143,1) 85%, rgba(168,162,203,1) 100%);
   font-family: var(--default-font);
 }
 
@@ -156,7 +157,8 @@ h6 {
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #030b25 ;
+     opacity: .6;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -495,8 +497,9 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background: linear-gradient(45deg, var(--background-color) 0%, color-mix(in srgb, var(--surface-color), transparent 10%) 100%), url("../img/footer-bg.jpg") center center no-repeat;
+  color:0;
+  background: ,url("../img/footer.png") center center no-repeat;
+      opacity: .8;
   background-size: cover;
   font-size: 14px;
   padding-bottom: 50px;
@@ -790,18 +793,18 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 60px 0;
+  padding: 400px 0 60px 0;
   display: flex;
   align-items: center;
-  background: linear-gradient(45deg, #A8A2CB 0%, #5B588F 43%, #000018 92%),center center no-repeat;
+   background: url("../img/heror2.svg") center center no-repeat;
   background-size: cover;
 }
 
 .hero h1 {
-  margin: 0;
+  margin: 60;
   font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
+  font-weight: 600;
+  line-height: 40px;
 }
 
 .hero p {
@@ -885,11 +888,19 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # About Section
 --------------------------------------------------------------*/
+.about {
+  position: relative;
+  padding: 80px 0;
+  background-color:#000011 ;
+  color: #ffffff;;
+  background-size: cover;
+}
+
 .about .content h3 {
-  font-size: 2rem;
+  font-size: 30pt;
   font-weight: 700;
 }
 
@@ -944,18 +955,63 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Stats Section
+# texto Section
+--------------------------------------------------------------*/
+.texto {
+  position: relative;
+  padding: 100px ;
+       background:background: rgb(0,0,17);
+background: linear-gradient(180deg, rgba(0,0,17,1) 0%, rgba(110,105,150,1) 80%);,center center no-repeat;
+  background-size: cover;
+}
+.texto:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.texto .container {
+  position: relative;
+  z-index: 3;
+}
+
+.texto .text-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.texto .text-item span {
+  font-size: 48px;
+  display: block;
+  color: var(--default-color);
+  font-weight: 700;
+}
+
+.texto .text-item p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+/*--------------------------------------------------------------
+# Stats Section texto
 --------------------------------------------------------------*/
 .stats {
   position: relative;
   padding: 80px 0;
-  background: Radial-gradient(#3A3456 0%, #211E2E 100%),center center no-repeat;
+  background-color:#000011 ;
+  color: #ffffff;
   background-size: cover;
 }
 
 .stats:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 80%);
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -988,8 +1044,121 @@ section,
 }
 
 /*--------------------------------------------------------------
+# text Section
+--------------------------------------------------------------*/
+.text {
+  position: relative;
+  padding: 160px ;
+     background: url("../img/players.png") center center no-repeat;
+  background-size: cover;
+}
+.text:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.text .container {
+  position: relative;
+  z-index: 3;
+}
+
+.text .text-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.text .text-item span {
+  font-size: 48px;
+  display: block;
+  color: var(--default-color);
+  font-weight: 700;
+}
+
+.text .text-item p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+/*--------------------------------------------------------------
+# Apoya Section
+--------------------------------------------------------------*/
+.apoya {
+  position: relative;
+  padding: 10px ;
+  background-color: #6E6996;
+  color: #ffffff; 
+}
+.apoya .content h3 {
+  font-size: 30pt;
+  font-weight: 00
+color: #ffffff  ;
+}
+.apoya .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.apoya .content ul li {
+  padding-bottom: 10px;
+}
+
+.apoya .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
+  color: var(--accent-color);
+}
+
+.apoya .content p:last-child {
+  margin-bottom: 0;
+}
+
+.apoya .content .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apoya .content .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.apoya .content .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), black 20%);
+  padding-right: 19px;
+}
+
+.apoya .content .read-more:hover i {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services {
+  position: relative;
+  padding: 10px ;
+  background-color: #6E6996;
+  color: #ffffff;
+    
 .services .service-item {
   position: relative;
   padding-top: 20px;
@@ -1044,6 +1213,12 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features {
+  position: relative;
+  padding: 10px ;
+  background-color: #6E6996;
+  color: #ffffff;
+    
 .features .features-image {
   position: relative;
   min-height: 400px;
@@ -1052,7 +1227,7 @@ section,
 .features .features-item h4 {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 5px 0;
+  margin:  0 px 0;
 }
 
 .features .features-item i {
@@ -1071,6 +1246,13 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+  .testimonials {
+position: relative;
+  padding: 80px 0;
+  background-color:#000011 ;
+  color: #ffffff;
+  background-size: cover;;
+      
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -1082,9 +1264,9 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
+  width: 40px;
+  border-radius: 30%;
+  margin: center;
   position: relative;
   z-index: 2;
   border: 6px solid var(--background-color);
@@ -1093,13 +1275,13 @@ section,
 .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
-  margin: 10px 0 5px 45px;
+  margin: center;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 0 0 45px;
+  margin: center;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
@@ -1157,6 +1339,12 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+ .portfolio {
+  position: relative;
+  padding: 10px ;
+  background-color: #6E6996;
+  color: #ffffff;      
+      
 .portfolio .portfolio-filters {
   padding: 0 0 20px 0;
   margin: 0 auto;
@@ -1245,8 +1433,14 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
+ .pricing {
+  position: relative;
+  padding: 10px ;
+   background-color: #5B588F ;
+  color: #ffffff; 
+     
 .pricing .pricing-item {
-  background-color: var(--surface-color);
+  background-color: #5B588F;
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
   border-top: 4px solid var(--background-color);
   padding: 60px 40px;
@@ -1292,7 +1486,7 @@ section,
 }
 
 .pricing ul i {
-  color: #059652;
+  color: #a8a2cb;
   font-size: 24px;
   padding-right: 3px;
 }
